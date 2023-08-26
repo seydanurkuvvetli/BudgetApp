@@ -8,7 +8,7 @@
 
 
 
-| Splash Screen             |  SignIn Screen           | SignUp Screen|
+| Splash Screen             |  SignUp Screen           | SignIn Screen|
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="https://github.com/seydanurkuvvetli/BudgetApp/assets/72807269/52f68792-aa6a-4533-bfa6-71e921b8f37b" alt="project-screenshot" width="200" height="400/"> |<img src="https://github.com/seydanurkuvvetli/BudgetApp/assets/72807269/2d1a5c16-817a-4405-9b8d-777d57d79a38" alt="project-screenshot" width="200" height="400/">|<img src="https://github.com/seydanurkuvvetli/BudgetApp/assets/72807269/e64b7e31-e20a-49fc-9a62-e4685a0a9e36" alt="project-screenshot" width="200" height="400/">
 
