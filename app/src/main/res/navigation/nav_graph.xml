@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/signInScreen"
+        android:name="com.example.budgetapp.ui.Signin.SignInScreen"
+        android:label="SignInScreen" >
+        <action
+            android:id="@+id/signInToSummary"
+            app:destination="@id/summaryScreen"
+            app:popUpTo="@id/signInScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/signInToSignup"
+            app:destination="@id/signUpScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="com.example.budgetapp.ui.signup.SignUpScreen"
+        android:label="SignUpScreen" >
+        <action
+            android:id="@+id/signUpToSignIn"
+            app:destination="@id/signInScreen" />
+        <action
+            android:id="@+id/signUpToSummary"
+            app:destination="@id/summaryScreen"
+            app:popUpTo="@id/signUpScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/expenseScreen"
+        android:name="com.example.budgetapp.ui.expense.ExpenseScreen"
+        android:label="fragment_expense_screen"
+        tools:layout="@layout/fragment_expense_screen" >
+        <action
+            android:id="@+id/action_expenseScreen_to_incomeScreen2"
+            app:destination="@id/incomeScreen" />
+        <action
+            android:id="@+id/action_expenseScreen_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryScreen"
+        android:name="com.example.budgetapp.ui.summary.SummaryScreen"
+        android:label="fragment_summery_screen"
+        tools:layout="@layout/fragment_summery_screen" >
+        <action
+            android:id="@+id/action_summaryScreen_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_summaryScreen_to_signInScreen"
+            app:destination="@id/signInScreen"
+            app:popUpTo="@id/summaryScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/incomeScreen"
+        android:name="com.example.budgetapp.ui.ıncome.IncomeScreen"
+        android:label="fragment_income_screen"
+        tools:layout="@layout/fragment_income_screen" >
+        <action
+            android:id="@+id/action_incomeScreen2_to_summaryScreen"
+            app:destination="@id/summaryScreen" />
+        <action
+            android:id="@+id/action_incomeScreen_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/detailFragment"
+        android:name="com.example.budgetapp.ui.detail.DetailFragment"
+        android:label="DetailFragment" >
+        <action
+            android:id="@+id/action_detailFragment_to_summaryScreen"
+            app:destination="@id/summaryScreen" />
+        <argument
+            android:name="Item"
+            app:argType="com.example.budgetapp.data.IncomeExpense"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </dialog>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.budgetapp.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
+    </fragment>
+</navigation>
